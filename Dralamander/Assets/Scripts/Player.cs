@@ -4,22 +4,28 @@ using UnityEngine;
 
 namespace GGJ22
 {
-    public enum MovementState
-    {
-        Ground,
-        Water
-    }
     public class Player : MonoBehaviour
     {
         private Vector3 _startPosition;
         private GroundMovement _groundMovement;
         private WaterMovement _waterMovement;
-        public BaseMovement Movement { get; private set; }
+        private AirMovement _airMovement;
+
+        private BaseMovement _currentMovement;
+        public BaseMovement Movement
+        {
+            get => _currentMovement;
+            private set
+            {
+                if (value != _currentMovement) { _currentMovement = value; Movement.Enter(); }
+            }
+        }
         private void Start()
         {
             _startPosition = transform.position;
             _groundMovement = GetComponent<GroundMovement>();
             _waterMovement = GetComponent<WaterMovement>();
+            _airMovement = GetComponent<AirMovement>();
             Init();
         }
 
@@ -34,29 +40,39 @@ namespace GGJ22
             Vector2 input = Vector2.zero;
             input.x = Input.GetAxis("Horizontal");
             input.y = Input.GetAxis("Vertical");
-            Movement.Move(input);    
+            Movement.Move(input);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.tag == "WaterLine")
+            switch (other.tag)
             {
-                Movement = _waterMovement;
-                Movement.Enter();
+                case "WaterLine":
+                    Movement = _waterMovement;
+                    break;
+                case "Ground":
+                        Movement = _groundMovement;
+                    break;
+                default:
+                    break;
             }
+
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if(other.tag == "OutOfBounds")
+            switch(other.tag)
             {
-                Respawn();
-                return;
-            }
-            if(other.tag == "WaterLine")
-            {
-                Movement = _groundMovement;
-                Movement.Enter();
+                case "OutOfBounds": 
+                    Respawn(); 
+                    break;
+
+                case "WaterLine":
+                    Movement = _airMovement;
+                    break;
+                default:
+                    break;
+
             }
         }
 
