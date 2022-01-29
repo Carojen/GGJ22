@@ -92,8 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _horizontalSpeed: 0.2
   _frictionCoefficient: 0.1
-  _jumpForce: 1
-  _jumpWindow: 0.5
+  _jumpForce: 5
+  _jumpWindow: 1
 --- !u!54 &2122281857
 Rigidbody:
   m_ObjectHideFlags: 0

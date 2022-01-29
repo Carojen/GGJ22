@@ -15,7 +15,7 @@ namespace GGJ22
             _rigidbody.AddForce(input * _horizontalSpeed);
         }
 
-        public override bool CanJump(float jump, Collision wallCol = null, float wallTime = 0.0f) => jump > 0;
+        public override bool CanJump(float jump, ref float wallTime, Collision wallCol = null) => jump > 0;
 
         public override void Enter()
         {

@@ -15,15 +15,11 @@ namespace GGJ22
         private HashSet<Collision> _currentValidGround = new HashSet<Collision>();
         private int _waterCount = 0;
 
-        private float _jumpTimer;
         private Collision _currentWallCollision;
         private float _wallHitTime;
 
         private Vector2 _moveInput = Vector2.zero;
         private float _jumpInput = 0f;
-
-        private float _lastLog = 0;
-        private int _logFrequency = 30;
         public BaseMovement Movement
         {
             get => _currentMovement;
@@ -43,7 +39,6 @@ namespace GGJ22
             Movement = _airMovement;
             _waterCount = 0;
             Movement.Reset();
-            _lastLog = Time.time;
         }
 
         private void Update()
@@ -52,13 +47,7 @@ namespace GGJ22
             _moveInput.y = Input.GetAxis("Vertical");
             _jumpInput = Input.GetAxis("Jump");
             Movement.Move(_moveInput);
-            Movement.TryJump(_jumpInput, _currentWallCollision, _wallHitTime);
-
-            if (Time.time > _lastLog + _logFrequency)
-            {
-                _lastLog = Time.time;
-                Debug.Log($"Input: ({_moveInput.x}, {_moveInput.y}, ({_jumpInput}))  State: {Movement}  waters: {_waterCount} blocks: {_currentValidGround.Count}");
-            }
+            Movement.TryJump(_jumpInput, ref _wallHitTime, _currentWallCollision);
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -117,7 +106,11 @@ namespace GGJ22
 
                 case "WaterLine":
                     _waterCount--;
-                    if (_waterCount == 0) Movement = _airMovement;
+                    if (_waterCount == 0)
+                    {
+                        _wallHitTime = Time.time;
+                        Movement = _airMovement;
+                    }
                     break;
                 default:
                     break;
