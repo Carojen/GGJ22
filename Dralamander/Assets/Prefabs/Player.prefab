@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6037295855845842614}
   - component: {fileID: 3399475085817364363}
   - component: {fileID: 2122281857}
+  - component: {fileID: 2205365570617742855}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -110,6 +111,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &2205365570617742855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2610855383978591313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 271490131
+      Data2: 1212241449
+      Data3: 178077614
+      Data4: -1777737097
+    Path: event:/Player/MovementMaster
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Waterness
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &4749016368503959908
 GameObject:
   m_ObjectHideFlags: 0
