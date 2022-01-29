@@ -21,6 +21,9 @@ ModelImporter:
   - first:
       74: 7881851793725417141
     second: Armature|2Swim (1)
+  - first:
+      74: 221858873802859264
+    second: Armature|3Run
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -50,11 +53,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|2Swim (1)
-      takeName: Armature|2Swim
+      name: Armature|3Run
+      takeName: Armature|3Run
       internalID: 0
       firstFrame: 0
-      lastFrame: 21
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
