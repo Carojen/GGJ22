@@ -10,7 +10,12 @@ namespace GGJ22
 
         public override void Move(Vector2 input)
         {
-            _rigidbody.AddForce(input);
+            _rigidbody.AddForce(Vector2.right * input.x);
+        }
+
+        public override void Enter()
+        {
+            _rigidbody.useGravity = true;
         }
     }
 }

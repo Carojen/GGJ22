@@ -11,14 +11,22 @@ namespace GGJ22
     }
     public class Player : MonoBehaviour
     {
+        private Vector3 _startPosition;
         private GroundMovement _groundMovement;
         private WaterMovement _waterMovement;
         public BaseMovement Movement { get; private set; }
         private void Start()
         {
+            _startPosition = transform.position;
             _groundMovement = GetComponent<GroundMovement>();
             _waterMovement = GetComponent<WaterMovement>();
+            Init();
+        }
+
+        private void Init()
+        {
             Movement = _groundMovement;
+            Movement.Reset();
         }
 
         private void Update()
@@ -27,6 +35,35 @@ namespace GGJ22
             input.x = Input.GetAxis("Horizontal");
             input.y = Input.GetAxis("Vertical");
             Movement.Move(input);    
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.tag == "WaterLine")
+            {
+                Movement = _waterMovement;
+                Movement.Enter();
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if(other.tag == "OutOfBounds")
+            {
+                Respawn();
+                return;
+            }
+            if(other.tag == "WaterLine")
+            {
+                Movement = _groundMovement;
+                Movement.Enter();
+            }
+        }
+
+        private void Respawn()
+        {
+            transform.position = _startPosition;
+            Init();
         }
     }
 }

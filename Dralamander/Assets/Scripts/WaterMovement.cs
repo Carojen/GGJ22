@@ -10,7 +10,12 @@ namespace GGJ22
 
         public override void Move(Vector2 input)
         {
-            throw new System.NotImplementedException();
+            _rigidbody.AddForce(input);
+        }
+
+        public override void Enter()
+        {
+            _rigidbody.useGravity = false;
         }
     }
 }
