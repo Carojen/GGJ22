@@ -1,0 +1,557 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9144580302789984567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Krock
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Krock
+  Guid:
+    Data1: 1452351431
+    Data2: 1311806452
+    Data3: -451011454
+    Data4: 1278931011
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 515
+--- !u!114 &-9019943797046914983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MovementMaster/Waterness
+  m_EditorClassIdentifier: 
+  Name: Waterness
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4018963714
+    data2: 3019987488
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6245796190458377860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/PickUp
+  m_EditorClassIdentifier: 
+  Path: event:/UI/PickUp
+  Guid:
+    Data1: -1343513741
+    Data2: 1099235557
+    Data3: -802300248
+    Data4: -995890129
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 691
+--- !u!114 &-5119704578724067158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Break
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Break
+  Guid:
+    Data1: 1999845173
+    Data2: 1204581253
+    Data3: 1214841229
+    Data4: 2040239151
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 271
+--- !u!114 &-4821935130756294641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/MovementMaster
+  m_EditorClassIdentifier: 
+  Path: event:/Player/MovementMaster
+  Guid:
+    Data1: 271490131
+    Data2: 1212241449
+    Data3: 178077614
+    Data4: -1777737097
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -9019943797046914983}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-4250020553966244090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Irriterad
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Irriterad
+  Guid:
+    Data1: -1406982621
+    Data2: 1159684374
+    Data3: 430812058
+    Data4: 765048009
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 710
+--- !u!114 &-3038727586777434491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bubbel
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bubbel
+  Guid:
+    Data1: 1301519641
+    Data2: 1138012809
+    Data3: -171920487
+    Data4: -1767474613
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 250
+--- !u!114 &-2109190077795395904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicMaster/Waterness
+  m_EditorClassIdentifier: 
+  Name: Waterness
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4018963714
+    data2: 3019987488
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 3264769922547234464}
+  - {fileID: 6514027140543896290}
+  EditorEvents:
+  - {fileID: 7506663909431132478}
+  - {fileID: -3038727586777434491}
+  - {fileID: -4250020553966244090}
+  - {fileID: -5119704578724067158}
+  - {fileID: 4278397587138152717}
+  - {fileID: -4821935130756294641}
+  - {fileID: 7920967348000111130}
+  - {fileID: 4646362817879208416}
+  - {fileID: -6245796190458377860}
+  - {fileID: 4489192721800832164}
+  - {fileID: 1673201834671850099}
+  - {fileID: -9144580302789984567}
+  - {fileID: 3494945228217406808}
+  - {fileID: 574241593644286520}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 6514027140543896290}
+  StringsBanks:
+  - {fileID: 3264769922547234464}
+  cacheTime: 637790591930691998
+  cacheVersion: 10
+--- !u!114 &574241593644286520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/MovementDry
+  m_EditorClassIdentifier: 
+  Path: event:/Player/MovementDry
+  Guid:
+    Data1: -941890309
+    Data2: 1185178659
+    Data3: -1073750854
+    Data4: 1368022203
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 516
+--- !u!114 &1673201834671850099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Moist
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Moist
+  Guid:
+    Data1: -728575803
+    Data2: 1165711015
+    Data3: 1101143185
+    Data4: -244566073
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1156
+--- !u!114 &3264769922547234464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../FMOD Projects/Dralamander/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637790591930691998
+  FileSizes:
+  - Name: Desktop
+    Value: 1408
+  Exists: 1
+--- !u!114 &3494945228217406808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Plask
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Plask
+  Guid:
+    Data1: -1303966507
+    Data2: 1222489222
+    Data3: 1177793211
+    Data4: -1554338864
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1450
+--- !u!114 &3757341943991013444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BreakingDam/Waterness
+  m_EditorClassIdentifier: 
+  Name: Waterness
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4018963714
+    data2: 3019987488
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4278397587138152717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicMaster
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicMaster
+  Guid:
+    Data1: -75653053
+    Data2: 1304240468
+    Data3: -1565938506
+    Data4: -38365337
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2109190077795395904}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 140070
+--- !u!114 &4489192721800832164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/MovementWater
+  m_EditorClassIdentifier: 
+  Path: event:/Player/MovementWater
+  Guid:
+    Data1: 209344190
+    Data2: 1235538569
+    Data3: -6644078
+    Data4: 2146107586
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &4646362817879208416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/DisappearingWater
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DisappearingWater
+  Guid:
+    Data1: 1508691051
+    Data2: 1310157490
+    Data3: -757640777
+    Data4: 1859368992
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16363
+--- !u!114 &6514027140543896290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../FMOD Projects/Dralamander/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637790591930661670
+  FileSizes:
+  - Name: Desktop
+    Value: 4010176
+  Exists: 1
+--- !u!114 &7506663909431132478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/BreakingDam
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/BreakingDam
+  Guid:
+    Data1: -1272532477
+    Data2: 1321580664
+    Data3: -878991728
+    Data4: 1219135189
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3757341943991013444}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12000
+--- !u!114 &7787876386095476214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AmbienceDry/Waterness
+  m_EditorClassIdentifier: 
+  Name: Waterness
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4018963714
+    data2: 3019987488
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7920967348000111130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/AmbienceDry
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/AmbienceDry
+  Guid:
+    Data1: 1510093661
+    Data2: 1268278802
+    Data3: -277971031
+    Data4: -788614635
+  Banks:
+  - {fileID: 6514027140543896290}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7787876386095476214}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 24000
