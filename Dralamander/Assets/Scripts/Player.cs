@@ -12,6 +12,8 @@ namespace GGJ22
         private AirMovement _airMovement;
 
         private BaseMovement _currentMovement;
+
+        private float _logTimer = 0.0f;
         public BaseMovement Movement
         {
             get => _currentMovement;
@@ -34,14 +36,22 @@ namespace GGJ22
         {
             Movement = _airMovement;
             Movement.Reset();
+            _logTimer = 0f;
         }
 
         private void Update()
         {
+            _logTimer++;
             Vector2 input = Vector2.zero;
             input.x = Input.GetAxis("Horizontal");
             input.y = Input.GetAxis("Vertical");
             Movement.Move(input);
+
+            if(_logTimer > 1000)
+            {
+                _logTimer = 0;
+                Debug.Log($"Input: ({input.x}, {input.y}  Velocity: {Movement}");
+            }
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -82,7 +92,7 @@ namespace GGJ22
             }
         }
 
-        private void Respawn()
+        public void Respawn()
         {
             transform.position = _startPosition;
             Init();

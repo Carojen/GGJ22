@@ -35,5 +35,7 @@ namespace GGJ22
         }
 
         public abstract void Enter();
+
+        public override string ToString() => $"{MType()}: {_rigidbody.velocity} ";
     }
 }
