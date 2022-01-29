@@ -7,6 +7,7 @@ TagManager:
   - OutOfBounds
   - WaterLine
   - Ground
+  - AmbientSound
   layers:
   - Default
   - TransparentFX
