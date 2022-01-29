@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraSideScroll : MonoBehaviour
+namespace GGJ22
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CameraSideScroll : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private Player _player;
+        private void Start()
+        {
+            _player = FindObjectOfType<GGJ22.Player>();
+        }
+        void Update()
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.x = _player.transform.position.x;
+            transform.position = newPosition;
+        }
     }
 }

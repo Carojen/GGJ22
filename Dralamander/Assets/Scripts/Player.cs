@@ -17,7 +17,8 @@ namespace GGJ22
             get => _currentMovement;
             private set
             {
-                if (value != _currentMovement) { _currentMovement = value; Movement.Enter(); }
+                if (value != _currentMovement) { _currentMovement = value; Movement.Enter(); Debug.Log($"Enter state {_currentMovement }"); }
+
             }
         }
         private void Start()
@@ -43,6 +44,11 @@ namespace GGJ22
             Movement.Move(input);
         }
 
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.transform.tag == "Ground" && Movement.MType() != MovementState.Water) Movement = _groundMovement;
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             switch (other.tag)
@@ -51,7 +57,7 @@ namespace GGJ22
                     Movement = _waterMovement;
                     break;
                 case "Ground":
-                        Movement = _groundMovement;
+                        if(Movement.MType() != MovementState.Water) Movement = _groundMovement;
                     break;
                 default:
                     break;

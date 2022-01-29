@@ -6,6 +6,7 @@ TagManager:
   tags:
   - OutOfBounds
   - WaterLine
+  - Ground
   layers:
   - Default
   - TransparentFX
