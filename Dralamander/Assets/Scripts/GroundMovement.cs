@@ -11,7 +11,7 @@ namespace GGJ22
         public override void Move(Vector2 input)
         {
             if (input.x == 0) input.x = -_rigidbody.velocity.x * (1f - _frictionCoefficient);
-            _rigidbody.AddForce(Vector2.right * input.x);
+            _rigidbody.AddForce(Vector2.right * input.x * _horizontalSpeed);
         }
 
         public override void Enter()

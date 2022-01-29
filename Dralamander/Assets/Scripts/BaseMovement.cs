@@ -13,6 +13,10 @@ namespace GGJ22
     public abstract class BaseMovement : MonoBehaviour
     {
         [SerializeField]
+        [Range(0.0f, 5.0f)]
+        protected float _horizontalSpeed = 1.0f;
+
+        [SerializeField]
         [Range(-1.0f, 1.0f)]
         protected float _frictionCoefficient = 0.0f;
         protected Rigidbody _rigidbody;

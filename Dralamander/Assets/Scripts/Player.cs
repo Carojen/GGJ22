@@ -32,7 +32,7 @@ namespace GGJ22
 
         private void Init()
         {
-            Movement = _groundMovement;
+            Movement = _airMovement;
             Movement.Reset();
         }
 

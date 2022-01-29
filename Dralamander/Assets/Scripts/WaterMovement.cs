@@ -13,7 +13,7 @@ namespace GGJ22
             if (input.x == 0) input.x = -_rigidbody.velocity.x * _frictionCoefficient;
             if (input.y == 0) input.y = -_rigidbody.velocity.y * _frictionCoefficient;
 
-            _rigidbody.AddForce(input);
+            _rigidbody.AddForce(input * _horizontalSpeed);
         }
 
         public override void Enter()
