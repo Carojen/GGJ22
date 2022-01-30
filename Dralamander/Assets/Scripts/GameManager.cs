@@ -13,7 +13,7 @@ namespace GGJ22
         public bool Wetness
         {
             get => _wetness;
-            private set { if (_wetness != value) RuntimeManager.StudioSystem.setParameterByName("Waterness", Wetness ? 1f : 0f); _wetness = value; }
+            set { if (_wetness != value) RuntimeManager.StudioSystem.setParameterByName("Waterness", Wetness ? 1f : 0f); _wetness = value; }
         }
 
         public static GameManager Instance

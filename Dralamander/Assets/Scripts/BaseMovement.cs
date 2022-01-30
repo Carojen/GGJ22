@@ -65,6 +65,17 @@ namespace GGJ22
             if (clampedVelocity.y < -_maxVelocity) clampedVelocity.y = -_maxVelocity;
         }
 
+        public virtual void UpdateRotation()
+        {
+            var velocity = _rigidbody.velocity.normalized;
+            var direction = Vector3.zero;
+            if (velocity.x > 0f) direction.y = 0f;
+            else direction.y = 180f;
+            direction.z = velocity.y * 90f;
+            
+            transform.rotation = Quaternion.Euler(direction);
+        }
+
         public abstract void Enter();
 
         public override string ToString() => $"{MType()}: {_rigidbody.velocity} ";

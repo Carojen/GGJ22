@@ -38,6 +38,7 @@ namespace GGJ22
 
         private void Init()
         {
+            GameManager.Instance.Wetness = false;
             _animator.Play("Base Layer.Idle");
             Movement = _airMovement;
             _waterCount = 0;
@@ -52,6 +53,7 @@ namespace GGJ22
             Movement.Move(_moveInput);
             Movement.TryJump(_jumpInput, ref _wallHitTime, _currentWallCollision);
             Movement.ClampVelocity();
+            Movement.UpdateRotation();
         }
 
         private void OnCollisionEnter(Collision collision)
