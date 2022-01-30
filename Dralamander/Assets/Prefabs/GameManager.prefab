@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1f38f177ddc884e96f68e6384ada3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterness: 0
   irriteradEvent:
     Guid:
       Data1: -1406982621
@@ -65,6 +64,13 @@ MonoBehaviour:
       Data3: 178077614
       Data4: -1777737097
     Path: event:/Player/MovementMaster
+  splashEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   splashUpEvent:
     Guid:
       Data1: -1303966507

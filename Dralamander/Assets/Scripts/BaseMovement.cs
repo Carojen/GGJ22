@@ -45,7 +45,7 @@ namespace GGJ22
         public virtual bool CanJump(float jump, ref float wallTime, Collision wallCol = null) => false;
         public virtual void Jump(float jump, Collision wallCol = null)
         {
-            GameManager.Instance.AudioJump();
+            GameManager.Instance.PlayEvent(GameManager.Jump, false);
             _rigidbody.AddForce(Vector3.up * jump * _jumpForce, ForceMode.Impulse);
         }
 

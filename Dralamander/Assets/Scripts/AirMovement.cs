@@ -31,14 +31,16 @@ namespace GGJ22
             var impulse = Vector3.up * _jumpForce;
             if (wallCol != null) // Walljump negates falling
             {
+                GameManager.Instance.PlayEvent(GameManager.Jump, false);
                 var newVelocity = _rigidbody.velocity;
                 newVelocity.y = 0;
                 _rigidbody.velocity = newVelocity;
                 impulse.x = wallCol.impulse.x;
-                impulse.y *= 2f;
+                impulse.y *= 2f;                
             }
             else // Waterline boost
             {
+                GameManager.Instance.PlayEvent(GameManager.Jump, true);
                 impulse.x = _rigidbody.velocity.normalized.x;
             }
 

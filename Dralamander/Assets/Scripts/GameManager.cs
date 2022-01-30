@@ -8,19 +8,23 @@ namespace GGJ22
     public class GameManager : MonoBehaviour
     {
         private Player _player;
-	//	public StudioEventEmitter ambienceEmitter;
-		[SerializeField, HideInInspector] bool waterness = false;
-		
-		public static GameManager Instance
+
+        private bool _wetness = false;
+        public bool Wetness
         {
-			get; private set;
+            get => _wetness;
+            private set { if (_wetness != value) RuntimeManager.StudioSystem.setParameterByName("Waterness", Wetness ? 1f : 0f); _wetness = value; }
         }
 
-		void Awake()
-		{
-			Instance = this;
-	//		ambienceEmitter = GameObject.FindGameObjectWithTag ("AmbientSound").GetComponent<StudioEventEmitter> ();
-		}
+        public static GameManager Instance
+        {
+            get; private set;
+        }
+
+        void Awake()
+        {
+            Instance = this;
+        }
 
         private void Start()
         {
@@ -31,126 +35,59 @@ namespace GGJ22
         {
             if (Input.GetKeyDown(KeyCode.R)) _player.Respawn();
         }
-	
-		public void SetIsWater()
-		{
-			if (waterness == false)
-			{
-				waterness = true;
-	//			ambienceEmitter.SetParameter ("Waterness", 1.0f);
-				FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Waterness", 1.0f);
-			}
-		}
-		
-		public void SetIsDry()
-		{
-			if (waterness == true)
-			{
-				waterness = false;
-	//			ambienceEmitter.SetParameter ("Waterness", 0.0f);
-				FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Waterness", 0.0f);
-			}
-		}
-		
 
-	
-	public EventReference irriteradEvent;
+        public void PlayEvent(EventReference audioEvent, bool wetness)
+        {
+            Wetness = wetness;
+            RuntimeManager.PlayOneShot(audioEvent);
+        }
 
-    public EventReference krockEvent;
-
-    public EventReference movementEvent;
-	
-    public EventReference splashUpEvent;
-
-    public EventReference splashDownEvent;
-	
-    public EventReference jumpEvent;
-
-    public EventReference breakingDamEvent;
-	
-    public EventReference bubbelEvent;
-
-    public EventReference disappearingWaterEvent;
-	
-    public EventReference moistEvent;
-
-    public EventReference breakEvent;
-
-    public EventReference pickUpEvent;
-		
-
-	public void AudioIrriterad()
-	{
-//	 emitter.SetEvent(irriteradEvent);
-//	 emitter.Play();
-		FMODUnity.RuntimeManager.PlayOneShot(irriteradEvent);
-	}
-	public void AudioKrock()
-{
-//        emitter.SetEvent(krockEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(krockEvent);
+        [SerializeField]
+        private EventReference irriteradEvent;
+        public static EventReference Annoyed => Instance.irriteradEvent;
+        
+        [SerializeField]
+        private EventReference krockEvent;
+        public static EventReference Collision => Instance.krockEvent;
+        
+        [SerializeField]
+        private EventReference movementEvent;
+        public static EventReference Movement => Instance.movementEvent;
+                
+        [SerializeField]
+        private EventReference splashUpEvent;
+        public static EventReference SplashUp => Instance.splashUpEvent;
+        
+        [SerializeField]
+        private EventReference splashDownEvent;
+        public static EventReference SplashDown => Instance.splashDownEvent;
+        
+        [SerializeField]
+        private EventReference jumpEvent;
+        public static EventReference Jump => Instance.jumpEvent;
+        
+        [SerializeField]
+        private EventReference breakingDamEvent;
+        public static EventReference BreakingDam => Instance.breakingDamEvent;
+        
+        [SerializeField]
+        private EventReference bubbelEvent;
+        public static EventReference Bubble => Instance.bubbelEvent;
+        
+        [SerializeField]
+        private EventReference disappearingWaterEvent;
+        public static EventReference RecedingWater => Instance.disappearingWaterEvent;
+        
+        [SerializeField]
+        private EventReference moistEvent;
+        public static EventReference Moist => Instance.moistEvent;
+        
+        [SerializeField]
+        private EventReference breakEvent;
+        public static EventReference Break => Instance.breakEvent;
+        
+        [SerializeField]
+        private EventReference pickUpEvent;
+        public static EventReference PickUp => Instance.pickUpEvent;        
+    }
 }
-	public void AudioMovement()
-	{
-//        emitter.SetEvent(movementEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(movementEvent);
-	}
-		public void AudioJump()
-	{
- //       emitter.SetEvent(jumpEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(jumpEvent);
-	}
-		public void AudioSplashUp()
-	{
- //       emitter.SetEvent(splashUpEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(splashUpEvent);
-	}
-		public void AudioSplashDown()
-	{
- //       emitter.SetEvent(splashDownEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(splashDownEvent);
-	}
-		public void AudioBreakingDam()
-	{
- //       emitter.SetEvent(breakingDamEvent);
-//        emitter.Play();
-		FMODUnity.RuntimeManager.PlayOneShot(breakingDamEvent);
-	}
-		public void AudioBubbel()
-	{
- //       emitter.SetEvent(bubbelEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(bubbelEvent);
-	}
-		public void AudioDisappearingWater()
-	{
-//        emitter.SetEvent(disappearingWaterEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(disappearingWaterEvent);
-	}
-		public void AudioMoist()
-	{
- //       emitter.SetEvent(moistEvent);
-//        emitter.Play();
-		FMODUnity.RuntimeManager.PlayOneShot(moistEvent);
-	}
-		public void AudioBreak()
-	{
- //       emitter.SetEvent(breakEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(breakEvent);
-	}
-		public void AudioPickUp()
-	{
- //       emitter.SetEvent(pickUpEvent);
- //       emitter.Play();
- 		FMODUnity.RuntimeManager.PlayOneShot(pickUpEvent);
-	}
-	}
-}
-

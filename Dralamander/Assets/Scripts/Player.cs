@@ -48,7 +48,6 @@ namespace GGJ22
             _jumpInput = Input.GetAxis("Jump");
             Movement.Move(_moveInput);
             Movement.TryJump(_jumpInput, ref _wallHitTime, _currentWallCollision);
-            if (Time.time % 100 == 1) Debug.Log($"{Movement} (({_moveInput}), {_jumpInput})");
             Movement.ClampVelocity();
 
         }
@@ -93,6 +92,7 @@ namespace GGJ22
                 case "WaterLine":
                     _waterCount++;
                     Movement = _waterMovement;
+                    GameManager.Instance.PlayEvent(GameManager.SplashDown, false);
                     break;
                 default:
                     break;
@@ -113,6 +113,7 @@ namespace GGJ22
                     {
                         _wallHitTime = Time.time;
                         Movement = _airMovement;
+                        GameManager.Instance.PlayEvent(GameManager.SplashUp, false);
                     }
                     break;
                 default:
