@@ -24,7 +24,17 @@ ModelImporter:
   - first:
       74: 221858873802859264
     second: Armature|3Run
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _mat_defaultMat.002
+    second: {fileID: 2100000, guid: 2bf1974095278ec47a730e8798280b7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: default_material.002
+    second: {fileID: 2100000, guid: 2bf1974095278ec47a730e8798280b7f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

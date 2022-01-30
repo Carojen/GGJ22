@@ -95,7 +95,7 @@ MonoBehaviour:
   _hAccel: 2
   _maxVelocity: 20
   _frictionCoefficient: 0.1
-  _jumpForce: 4
+  _jumpForce: 5
   _jumpWindow: 1
 --- !u!54 &2122281857
 Rigidbody:
