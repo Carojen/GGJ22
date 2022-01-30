@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterFog_01
+  m_Shader: {fileID: -6465566751694194690, guid: 34f9806ee330335409619718ad8309de, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_342929783c884587b047654b0f3a39b5: 0.5
+    - Vector1_e7d27f08158c4dfe96bd9be575f3e29b: 2
+    - Vector1_f1319cffdfe542bfb5f8270c0054748a: 1
+    - Vector1_f95bbca5e4e74b8d967c6b9d89e5d8fc: 1
+    m_Colors:
+    - Color_6ebd102149b74277b69b3a0fb93b8bda: {r: 0.2196066, g: 0.2763484, b: 0.4433962, a: 0}
+    - Vector3_8894259b9c0c402591e29cf6769f28e2: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
