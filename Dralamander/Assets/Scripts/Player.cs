@@ -10,6 +10,7 @@ namespace GGJ22
         private GroundMovement _groundMovement;
         private WaterMovement _waterMovement;
         private AirMovement _airMovement;
+        private Animator _animator;
 
         private BaseMovement _currentMovement;
         private HashSet<Collision> _currentValidGround = new HashSet<Collision>();
@@ -31,11 +32,13 @@ namespace GGJ22
             _groundMovement = GetComponent<GroundMovement>();
             _waterMovement = GetComponent<WaterMovement>();
             _airMovement = GetComponent<AirMovement>();
+            _animator = GetComponentInChildren<Animator>(true);
             Init();
         }
 
         private void Init()
         {
+            _animator.Play("BaseLayer.Idle");
             Movement = _airMovement;
             _waterCount = 0;
             Movement.Reset();

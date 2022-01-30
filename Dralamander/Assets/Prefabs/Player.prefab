@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dralamander
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 003bff398d507be4d964bf48d414cc84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3c915cbf5a8f9ab42b4107680478fbed, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 003bff398d507be4d964bf48d414cc84, type: 3}
 --- !u!4 &3691120854604658116 stripped
