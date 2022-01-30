@@ -10,7 +10,8 @@ namespace GGJ22
 
         public override void Move(Vector2 input)
         {
-            if (input.x == 0) input.x = -_rigidbody.velocity.x * _frictionCoefficient;
+            if (input.x == 0) { input.x = -_rigidbody.velocity.x * _frictionCoefficient; _animator.Play("Base Layer.Idle"); }
+            else _animator.Play("Base Layer.Run");
             input.y = 0f;
             _rigidbody.AddForce(input * _hAccel);            
         }

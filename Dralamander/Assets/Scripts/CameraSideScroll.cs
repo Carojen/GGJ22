@@ -15,6 +15,7 @@ namespace GGJ22
         {
             Vector3 newPosition = transform.position;
             newPosition.x = _player.transform.position.x;
+            newPosition.y = _player.transform.position.y;
             transform.position = newPosition;
         }
     }

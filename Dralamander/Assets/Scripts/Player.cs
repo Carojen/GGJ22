@@ -38,7 +38,8 @@ namespace GGJ22
 
         private void Init()
         {
-            _animator.Play("BaseLayer.Idle");
+            GameManager.Instance.Wetness = false;
+            _animator.Play("Base Layer.Idle");
             Movement = _airMovement;
             _waterCount = 0;
             Movement.Reset();
@@ -52,7 +53,7 @@ namespace GGJ22
             Movement.Move(_moveInput);
             Movement.TryJump(_jumpInput, ref _wallHitTime, _currentWallCollision);
             Movement.ClampVelocity();
-
+            Movement.UpdateRotation();
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -63,8 +64,7 @@ namespace GGJ22
                 if (direction.y > 0 && Mathf.Abs(direction.x) < direction.y) //Valid ground if collision force is directed mostly up
                 {
                     _currentValidGround.Add(collision);
-                    if (Movement.MType() != MovementState.Water)
-                        Movement = _groundMovement;
+                    if (Movement.MType() != MovementState.Water) Movement = _groundMovement;
                 }
                 else if (direction.y < Mathf.Abs(direction.x)) //Wall hit if collision is mostly sidewards
                 {
@@ -84,7 +84,7 @@ namespace GGJ22
                     _wallHitTime = 0f;
                 }
                 _currentValidGround.Remove(collision);
-                if (Movement.MType() == MovementState.Ground) Movement = _airMovement;                
+                if (Movement.MType() == MovementState.Ground && Movement.CurrentVelocity.y > 1f) { Movement = _airMovement; _animator.Play("Base Layer.Swim"); }                
             }
         }
 

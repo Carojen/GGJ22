@@ -29,10 +29,14 @@ namespace GGJ22
         protected float _jumpForce = 1f;
 
         protected Rigidbody _rigidbody;
+        protected Animator _animator;
+
+        public Vector3 CurrentVelocity => _rigidbody.velocity; 
 
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            _animator = GetComponentInChildren<Animator>(true);
         }
 
         public abstract MovementState MType();
@@ -61,6 +65,21 @@ namespace GGJ22
             if (clampedVelocity.x < -_maxVelocity) clampedVelocity.x = -_maxVelocity;
             if (clampedVelocity.y > _maxVelocity) clampedVelocity.y = _maxVelocity;
             if (clampedVelocity.y < -_maxVelocity) clampedVelocity.y = -_maxVelocity;
+        }
+
+        public virtual void UpdateRotation()
+        {
+            if (MType() == MovementState.Ground) transform.rotation = Quaternion.Euler(Vector3.zero);
+            else
+            {
+                var velocity = _rigidbody.velocity.normalized * 90f;
+                var direction = transform.rotation.eulerAngles;
+                if (velocity.x > 0f) direction.y = 0f;
+                else if (velocity.x < -0f) direction.y = 180f;
+                if (Mathf.Abs(velocity.y) > 10f) direction.z = velocity.y;
+
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(direction), 0.5f);
+            }                
         }
 
         public abstract void Enter();

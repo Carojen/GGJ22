@@ -59,5 +59,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Bark_LOD1__phyqK Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4e7cd9b92d94f1b49b8973217d93b8cf, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e7cd9b92d94f1b49b8973217d93b8cf, type: 3}
+--- !u!1 &2112223017209999537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e7cd9b92d94f1b49b8973217d93b8cf, type: 3}
+  m_PrefabInstance: {fileID: 1265923216346025440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &334646976524105884
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112223017209999537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7615684400683112977, guid: 4e7cd9b92d94f1b49b8973217d93b8cf, type: 3}
