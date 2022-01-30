@@ -13,15 +13,19 @@ namespace GGJ22
     public abstract class BaseMovement : MonoBehaviour
     {
         [SerializeField]
-        [Range(0.0f, 5.0f)]
-        protected float _horizontalSpeed = 1.0f;
+        [Range(0.0f, 100.0f)]
+        protected float _hAccel = 20.0f;
+
+        [SerializeField]
+        [Range(0.0f, 20.0f)]
+        protected float _maxVelocity = 20f;
 
         [SerializeField]
         [Range(-1.0f, 1.0f)]
         protected float _frictionCoefficient = 0.0f;
 
         [SerializeField]
-        [Range(0.0f, 10f)]
+        [Range(0.0f, 20f)]
         protected float _jumpForce = 1f;
 
         protected Rigidbody _rigidbody;
@@ -47,6 +51,15 @@ namespace GGJ22
         public void Reset()
         {
             _rigidbody.velocity = Vector3.zero;
+        }
+
+        public virtual void ClampVelocity()
+        {
+            var clampedVelocity = _rigidbody.velocity;
+            if (clampedVelocity.x > _maxVelocity) clampedVelocity.x = _maxVelocity;
+            if (clampedVelocity.x < -_maxVelocity) clampedVelocity.x = -_maxVelocity;
+            if (clampedVelocity.y > _maxVelocity) clampedVelocity.y = _maxVelocity;
+            if (clampedVelocity.y < -_maxVelocity) clampedVelocity.y = -_maxVelocity;
         }
 
         public abstract void Enter();
