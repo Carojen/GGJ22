@@ -51,5 +51,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nordic Beach Rock_LOD1__vgjidiqmw Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9944aa2f120137a4aa6af5d0c4ec0c80, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9944aa2f120137a4aa6af5d0c4ec0c80, type: 3}
+--- !u!1 &8986143875936720486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9944aa2f120137a4aa6af5d0c4ec0c80, type: 3}
+  m_PrefabInstance: {fileID: 8103202713712438071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4283167674616407959
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8986143875936720486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5917936019259231838, guid: 9944aa2f120137a4aa6af5d0c4ec0c80, type: 3}
