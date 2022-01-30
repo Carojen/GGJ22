@@ -84,7 +84,7 @@ namespace GGJ22
                     _wallHitTime = 0f;
                 }
                 _currentValidGround.Remove(collision);
-                if (Movement.MType() == MovementState.Ground) { Movement = _airMovement; _animator.Play("Base Layer.Swim"); }                
+                if (Movement.MType() == MovementState.Ground && Movement.CurrentVelocity.y > 1f) { Movement = _airMovement; _animator.Play("Base Layer.Swim"); }                
             }
         }
 
