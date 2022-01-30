@@ -43,3 +43,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1f38f177ddc884e96f68e6384ada3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterness: 0
+  irriteradEvent:
+    Guid:
+      Data1: -1406982621
+      Data2: 1159684374
+      Data3: 430812058
+      Data4: 765048009
+    Path: event:/Player/Irriterad
+  krockEvent:
+    Guid:
+      Data1: 1452351431
+      Data2: 1311806452
+      Data3: -451011454
+      Data4: 1278931011
+    Path: event:/Player/Krock
+  movementEvent:
+    Guid:
+      Data1: 271490131
+      Data2: 1212241449
+      Data3: 178077614
+      Data4: -1777737097
+    Path: event:/Player/MovementMaster
+  splashUpEvent:
+    Guid:
+      Data1: -1303966507
+      Data2: 1222489222
+      Data3: 1177793211
+      Data4: -1554338864
+    Path: event:/Player/SplashUp
+  splashDownEvent:
+    Guid:
+      Data1: 199939118
+      Data2: 1317043902
+      Data3: 1769349789
+      Data4: 1641300430
+    Path: event:/Player/SplashDown
+  jumpEvent:
+    Guid:
+      Data1: -563644892
+      Data2: 1094045257
+      Data3: 1557925515
+      Data4: 1016758266
+    Path: event:/Player/Jump
+  breakingDamEvent:
+    Guid:
+      Data1: -1272532477
+      Data2: 1321580664
+      Data3: -878991728
+      Data4: 1219135189
+    Path: event:/SFX/BreakingDam
+  bubbelEvent:
+    Guid:
+      Data1: 1301519641
+      Data2: 1138012809
+      Data3: -171920487
+      Data4: -1767474613
+    Path: event:/SFX/Bubbel
+  disappearingWaterEvent:
+    Guid:
+      Data1: 1508691051
+      Data2: 1310157490
+      Data3: -757640777
+      Data4: 1859368992
+    Path: event:/SFX/DisappearingWater
+  moistEvent:
+    Guid:
+      Data1: -728575803
+      Data2: 1165711015
+      Data3: 1101143185
+      Data4: -244566073
+    Path: event:/SFX/Moist
+  breakEvent:
+    Guid:
+      Data1: 1999845173
+      Data2: 1204581253
+      Data3: 1214841229
+      Data4: 2040239151
+    Path: event:/UI/Break
+  pickUpEvent:
+    Guid:
+      Data1: -1343513741
+      Data2: 1099235557
+      Data3: -802300248
+      Data4: -995890129
+    Path: event:/UI/PickUp
