@@ -183,6 +183,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 450307842820552081, guid: 56b553320dcf5654fa1bf1392c33c958, type: 3}
+      propertyPath: m_TagString
+      value: AmbientSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 450307842820552087, guid: 56b553320dcf5654fa1bf1392c33c958, type: 3}
+      propertyPath: Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 450307842820552087, guid: 56b553320dcf5654fa1bf1392c33c958, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Ambience/MusicMaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 450307842820552087, guid: 56b553320dcf5654fa1bf1392c33c958, type: 3}
+      propertyPath: Params.Array.data[0].Name
+      value: Waterness
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b553320dcf5654fa1bf1392c33c958, type: 3}
 --- !u!1001 &1013757877316388130
