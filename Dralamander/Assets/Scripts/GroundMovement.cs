@@ -12,7 +12,7 @@ namespace GGJ22
         {
             if (input.x == 0) input.x = -_rigidbody.velocity.x * _frictionCoefficient;
             input.y = 0f;
-            _rigidbody.AddForce(input * _horizontalSpeed);
+            _rigidbody.AddForce(input * _hAccel);            
         }
 
         public override bool CanJump(float jump, ref float wallTime, Collision wallCol = null) => jump > 0;

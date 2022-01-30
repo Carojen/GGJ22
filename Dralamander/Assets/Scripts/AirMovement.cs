@@ -51,7 +51,7 @@ namespace GGJ22
             else if (input.x < 0) input.x += _rigidbody.velocity.x * _frictionCoefficient;
             else input.x -= _rigidbody.velocity.x * _frictionCoefficient;
             input.y = 0;
-            _rigidbody.AddForce(input * _horizontalSpeed);
+            _rigidbody.AddForce(input * _hAccel);
         }
     }
 }

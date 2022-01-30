@@ -41,13 +41,16 @@ namespace GGJ22
             Movement.Reset();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             _moveInput.x = Input.GetAxis("Horizontal");
             _moveInput.y = Input.GetAxis("Vertical");
             _jumpInput = Input.GetAxis("Jump");
             Movement.Move(_moveInput);
             Movement.TryJump(_jumpInput, ref _wallHitTime, _currentWallCollision);
+            if (Time.time % 100 == 1) Debug.Log($"{Movement} (({_moveInput}), {_jumpInput})");
+            Movement.ClampVelocity();
+
         }
 
         private void OnCollisionEnter(Collision collision)
