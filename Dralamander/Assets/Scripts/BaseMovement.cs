@@ -29,10 +29,12 @@ namespace GGJ22
         protected float _jumpForce = 1f;
 
         protected Rigidbody _rigidbody;
+        protected Animator _animator;
 
         private void Start()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            _animator = GetComponentInChildren<Animator>(true);
         }
 
         public abstract MovementState MType();

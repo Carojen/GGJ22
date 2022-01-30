@@ -10,6 +10,8 @@ namespace GGJ22
 
         public override void Move(Vector2 input)
         {
+            _animator.Play("Base Layer.Swim");
+            
             if (input.x == 0) input.x = -_rigidbody.velocity.x * _frictionCoefficient;
             if (input.y == 0) input.y = -_rigidbody.velocity.y * _frictionCoefficient;
             _rigidbody.AddForce(input * _hAccel);
