@@ -11,8 +11,14 @@ namespace GGJ22
 	//	public StudioEventEmitter ambienceEmitter;
 		[SerializeField, HideInInspector] bool waterness = false;
 		
+		public static GameManager Instance
+        {
+			get; private set;
+        }
+
 		void Awake()
 		{
+			Instance = this;
 	//		ambienceEmitter = GameObject.FindGameObjectWithTag ("AmbientSound").GetComponent<StudioEventEmitter> ();
 		}
 
