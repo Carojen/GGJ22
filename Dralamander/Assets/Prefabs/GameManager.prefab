@@ -59,18 +59,11 @@ MonoBehaviour:
     Path: event:/Player/Krock
   movementEvent:
     Guid:
-      Data1: 271490131
-      Data2: 1212241449
-      Data3: 178077614
-      Data4: -1777737097
+      Data1: -563644892
+      Data2: 1094045257
+      Data3: 1557925515
+      Data4: 1016758266
     Path: event:/Player/MovementMaster
-  splashEvent:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   splashUpEvent:
     Guid:
       Data1: -1303966507
@@ -87,10 +80,10 @@ MonoBehaviour:
     Path: event:/Player/SplashDown
   jumpEvent:
     Guid:
-      Data1: -563644892
-      Data2: 1094045257
-      Data3: 1557925515
-      Data4: 1016758266
+      Data1: 271490131
+      Data2: 1212241449
+      Data3: 178077614
+      Data4: -1777737097
     Path: event:/Player/Jump
   breakingDamEvent:
     Guid:
