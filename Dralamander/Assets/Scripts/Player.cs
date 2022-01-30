@@ -62,8 +62,7 @@ namespace GGJ22
                 if (direction.y > 0 && Mathf.Abs(direction.x) < direction.y) //Valid ground if collision force is directed mostly up
                 {
                     _currentValidGround.Add(collision);
-                    if (Movement.MType() != MovementState.Water)
-                        Movement = _groundMovement;
+                    if (Movement.MType() != MovementState.Water) Movement = _groundMovement;
                 }
                 else if (direction.y < Mathf.Abs(direction.x)) //Wall hit if collision is mostly sidewards
                 {
@@ -83,7 +82,7 @@ namespace GGJ22
                     _wallHitTime = 0f;
                 }
                 _currentValidGround.Remove(collision);
-                if (Movement.MType() == MovementState.Ground) Movement = _airMovement;                
+                if (Movement.MType() == MovementState.Ground) { Movement = _airMovement; _animator.Play("Base Layer.Swim"); }                
             }
         }
 
